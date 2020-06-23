@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>View Page</title>
+</head>
+<body>
+    <h1><a href="/topic">This is Lists</a></h1>
+    <% for(var i=0; i<topics.length; i++) { %>
+        <li><a href="/topic/<%= topics[i].id %>"><%= topics[i].title %></a></li>
+        <% } %>
+    </ol>
+    <article>
+        <% if(topic) { %>
+            <h2><%= topic.title %></h2>
+            <p><%= topic.description %></p>
+            <p>by. <%= topic.author %></p>
+            <% } else {%>
+                <h2>Welcome Page</h2>
+                    This is Server side Tutorial !!
+                <% } %>
+
+    </article>
+</body>
+</html>
